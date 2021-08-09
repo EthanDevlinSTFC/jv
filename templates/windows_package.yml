@@ -17,7 +17,7 @@ steps:
       echo "Executable installer is "$exe.Name
       # Create Zip from Exe
       innoextract.exe $exe.Name -d $exe.BaseName
-      mv "$($exe.BaseName)\app\bin\*" $exe.BaseName
+      mv "$($exe.BaseName)\app\build\bin\*" $exe.BaseName
       mv "$($exe.BaseName)\app" ./
       #rm -Force "$($exe.BaseName)\app"
       $zip = $exe.BaseName + ".zip"
