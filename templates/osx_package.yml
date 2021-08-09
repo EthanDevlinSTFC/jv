@@ -13,7 +13,8 @@ steps:
     displayName: 'Prepare DMG Dirs'
   - bash: |
       set -ex
-      VERSION=$(cat version)
+       # Get program version
+      JV_VERSION=`grep "#define JVVERSION" src/main/version.cpp | sed "s/.*\"\(.*\)\"/\1/g"`
       # Fix icon link
       sed -i -e "s/jv.icns/jv.icns/g" jv-${VERSION}/jv.app/Contents/Info.plist
       # Create DMG
