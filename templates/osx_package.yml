@@ -15,12 +15,12 @@ steps:
       set -ex
       VERSION=$(cat version)
       # Fix icon link
-      sed -i -e "s/Gudrun.icns/Gudrun-GUI.icns/g" Gudrun-GUI-${VERSION}/Gudrun-GUI.app/Contents/Info.plist
+      sed -i -e "s/jv.icns/jv.icns/g" jv-${VERSION}/jv.app/Contents/Info.plist
       # Create DMG
-      dmgbuild -s ci/osx/dmgbuild-settings.py -D app=./Gudrun-GUI-${VERSION}/Gudrun-GUI.app -D icon=./Gudrun-GUI-${VERSION}/Gudrun-GUI.app/Contents/Resources/Gudrun-GUI.icns "Gudrun GUI" Gudrun-GUI-${VERSION}.dmg
+      dmgbuild -s ci/osx/dmgbuild-settings.py -D app=./jv-${VERSION}/jv.app -D icon=./jv-${VERSION}/jv.app/Contents/Resources/jv.icns "jv" jv-${VERSION}.dmg
     displayName: 'Create Disk Images'
   - bash: |
       set -ex
       mkdir packages
-      mv Gudrun*.dmg packages
+      mv JournalViewer*.dmg packages
     displayName: 'Move Artifacts'

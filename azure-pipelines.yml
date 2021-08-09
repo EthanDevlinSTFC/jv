@@ -21,6 +21,12 @@ jobs:
       - checkout: self
         fetchDepth: 1
       - template: templates/windows.yml
+      - template: templates/windows_package.yml
+      - task: PublishBuildArtifacts@1
+            inputs:
+              PathtoPublish: "packages/"
+              ArtifactName: 'windows-artifacts'
+            displayName: 'Publish Windows Artifacts'
   
   - job: 'linux'
     displayName: 'Ubuntu Build'
@@ -30,6 +36,12 @@ jobs:
       - checkout: self
         fetchDepth: 1
       - template: templates/linux.yml
+      - template: templates/linux_package.yml
+      - task: PublishBuildArtifacts@1
+            inputs:
+              PathtoPublish: "packages/"
+              ArtifactName: 'linux-artifacts'
+            displayName: 'Publish Linux Artifacts'
   
   - job: 'osx'
     displayName: 'OSX Build'
@@ -39,3 +51,9 @@ jobs:
       - checkout: self
         fetchDepth: 1
       - template: templates/osx.yml
+      - template: templates/osx_package.yml
+      - task: PublishBuildArtifacts@1
+            inputs:
+              PathtoPublish: "packages/"
+              ArtifactName: 'osx-artifacts'
+            displayName: 'Publish OSX Artifacts'
