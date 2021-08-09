@@ -1,3 +1,7 @@
+parameters:
+  - name: qtver
+    default: 5.15.1
+    
 steps:
   - script: |
       choco install -y zip innoextract
