@@ -14,7 +14,7 @@ steps:
       Qt5_ROOT=${QT_INSTALL_DIR}/${QTVER}
       # Get program version
       JV_VERSION=`grep "#define JVVERSION" src/version.h | sed "s/.*\"\(.*\)\"/\1/g"`
-      ./prep-dmg -a JournalViewer -v ${JV_VERSION} -b build/bin/JournalViewer.app/Contents/MacOS/JournalViewer -d ${Qt5_ROOT} -i icon/icon-1024x1024.png -p build/bin/JournalViewer.app/Contents/Info.plist
+      ./prep-dmg -a JournalViewer -v ${JV_VERSION} -b build/bin/JournalViewer.app/Contents/MacOS/JournalViewer -d ${Qt5_ROOT} -i extra/jv1024.png -p build/bin/JournalViewer.app/Contents/Info.plist
     displayName: 'Prepare DMG Dirs'
   - bash: |
       set -ex
