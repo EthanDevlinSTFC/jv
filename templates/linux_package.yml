@@ -26,11 +26,6 @@ steps:
       export PATH=$QT_BASE_DIR/bin:$PATH
       export QMAKE=$QT_BASE_DIR/bin/qmake
       export LD_LIBRARY_PATH=$QT_BASE_DIR/lib/cmake/Qt5Core:$LD_LIBRARY_PATH
-      export LD_LIBRARY_PATH=$QT_BASE_DIR/lib/cmake/Qt5Widgets:$LD_LIBRARY_PATH
-      export LD_LIBRARY_PATH=$QT_BASE_DIR/lib/cmake/Qt5Network:$LD_LIBRARY_PATH
-      export LD_LIBRARY_PATH=$QT_BASE_DIR/lib/cmake/Qt5PrintSupport:$LD_LIBRARY_PATH
-      export LD_LIBRARY_PATH=$QT_BASE_DIR/lib/cmake/Qt5Gui:$LD_LIBRARY_PATH
-      export LD_LIBRARY_PATH=$QT_BASE_DIR/lib/cmake/Qt5Svg:$LD_LIBRARY_PATH
       # Extract the version from the source
       export VERSION=`grep "#define JVVERSION" src/version.h | sed "s/.*\"\(.*\)\"/\1/g"`
       # Get extra dependencies needed by the App Image
