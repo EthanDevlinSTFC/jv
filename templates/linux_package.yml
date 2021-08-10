@@ -2,6 +2,7 @@ steps:
   - bash: |
       set -ex
       ci/scripts/prep-appimage -a JV -v continuous -b build/bin/jv
+      wget -q https://github.com/disorderedmaterials/scripts/prep-appimage
     displayName: 'Prepare AppDirs'
   - bash: |
       set -ex
