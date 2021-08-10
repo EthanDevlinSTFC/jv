@@ -3,6 +3,8 @@ steps:
       pip3 install dmgbuild biplist
       wget https://raw.githubusercontent.com/disorderedmaterials/scripts/master/prep-dmg
       chmod u+x ./prep-dmg
+      wget https://raw.githubusercontent.com/disorderedmaterials/scripts/master/prep-appimage
+      chmod u+x ./prep-appimage
     displayName: 'Install Prerequisites'
   - bash: |
       set -ex
