@@ -36,7 +36,7 @@ steps:
       # Get extra dependencies needed by the App Image
       sudo apt install libxkbcommon-x11-0 libxcb-render0 libxcb-render-util0 libxcb-shape0 libxcb-randr0 libxcb-xfixes0 libxcb-xkb1 libxcb-sync1 libxcb-shm0 libxcb-icccm4 libxcb-keysyms1 libxcb-image0 libxcb-util1 libfontconfig
       # Run on the targets
-      ./linuxdeploy.AppImage --appdir JournalViewer-continuous.AppDir --plugin qt --library --output appimage
+      ./linuxdeploy.AppImage --appdir JournalViewer-continuous.AppDir --plugin qt --library $LD_LIBRARY_PATH --output appimage
     displayName: 'Create AppImages'
   - bash: |
       set -ex
