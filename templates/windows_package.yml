@@ -13,7 +13,6 @@ steps:
       $env:PATH += ";$env:Qt5_DIR" + "\bin"
       echo $env:Qt5_DIR
       $env:MINGW_DIR = $env:Qt5_DIR
-      $env:ANTLR_DIR = $(Get-Location).path + "\build\antlr4runtime\src\antlr_runtime\dist\Release"
       $env:JV_DIR = $(Get-Location).path + "\build\bin"
       # Run Inno Setup Compiler
       iscc.exe /O.\ .\ci\windows\jv.iss
