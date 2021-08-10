@@ -1,7 +1,9 @@
 steps:
   - bash: |
       set -ex
-      wget https://github.com/disorderedmaterials/scripts/prep-appimage -a JournalViewer -v continuous -b build/bin/JournalViewer
+      wget https://raw.githubusercontent.com/disorderedmaterials/scripts/master/prep-dmg
+      chmod u+x ./prep-dmg
+      wget https://raw.githubusercontent.com/disorderedmaterials/scripts/master/prep-appimage
       chmod u+x ./prep-appimage
     displayName: 'Prepare AppDirs'
   - bash: |
