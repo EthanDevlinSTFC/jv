@@ -5,7 +5,7 @@
 #define MyAppVersion "0.9.0"
 #define MyAppPublisher "Tristan Youngs"
 #define MyAppURL "https://www.projectaten.com/"
-#define MyAppExeName "jv"
+#define MyAppExeName "JournalViewer.exe"
 
 ; Locations of bin directories of Dissolve, Qt, GnuWin, MinGW etc.
 #define JvDir GetEnv('JV_DIR')
@@ -41,7 +41,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "{#JvDir}\jv"; DestDir: "{app}\bin"; Flags: ignoreversion
+Source: "{#JvDir}\JournalViewer.exe"; DestDir: "{app}\bin"; Flags: ignoreversion
 Source: "JournalViewer.ico"; DestDir: "{app}\bin"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 Source: "{#ANTLRDir}\antlr4-runtime.dll"; DestDir: "{app}\bin"
