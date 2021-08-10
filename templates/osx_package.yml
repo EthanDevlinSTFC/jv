@@ -19,7 +19,7 @@ steps:
   - bash: |
       set -ex
        # Get program version
-      JV_VERSION=`grep "#define JVVERSION" src/main/version.cpp | sed "s/.*\"\(.*\)\"/\1/g"`
+      JV_VERSION=`grep "#define JVVERSION" src/version.h | sed "s/.*\"\(.*\)\"/\1/g"`
       # Fix icon link
       sed -i -e "s/JournalViewer.icns/JournalViewer.icns/g" JournalViewer-${VERSION}/JournalViewer.app/Contents/Info.plist
       # Create DMG
