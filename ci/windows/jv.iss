@@ -30,7 +30,7 @@ DefaultGroupName={#MyAppName}
 LicenseFile=..\..\LICENSE.txt
 OutputDir=..\..\
 OutputBaseFilename=jv-0.9.0-Win64
-SetupIconFile=jv.ico
+SetupIconFile=JournalViewer.ico
 Compression=lzma
 SolidCompression=yes
 
@@ -42,7 +42,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 
 [Files]
 Source: "{#JvDir}\jv.exe"; DestDir: "{app}\bin"; Flags: ignoreversion
-Source: "jv.ico"; DestDir: "{app}\bin"; Flags: ignoreversion
+Source: "JournalViewer.ico"; DestDir: "{app}\bin"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 Source: "{#ANTLRDir}\antlr4-runtime.dll"; DestDir: "{app}\bin"
 ;Source: "{#MinGWDir}\bin\libgcc_s_seh-1.dll"; DestDir: "{app}\bin"
@@ -65,8 +65,8 @@ Source: "{#QtDir}\plugins\imageformats\*.dll"; DestDir: "{app}\bin\imageformats"
 Source: "C:\Windows\System32\D3DCompiler_47.dll"; DestDir: "{app}\bin"; Flags: ignoreversion
 
 [Icons]
-Name: "{group}\{#MyAppName}"; IconFilename: "{app}\bin\jv.ico"; Filename: "{app}\bin\{#MyAppExeName}"; WorkingDir: "{app}"
-Name: "{commondesktop}\{#MyAppName}"; IconFilename: "{app}\bin\jv.ico"; Filename: "{app}\bin\{#MyAppExeName}"; WorkingDir: "{app}"; Tasks: desktopicon
+Name: "{group}\{#MyAppName}"; IconFilename: "{app}\bin\JournalViewer.ico"; Filename: "{app}\bin\{#MyAppExeName}"; WorkingDir: "{app}"
+Name: "{commondesktop}\{#MyAppName}"; IconFilename: "{app}\bin\JournalViewer.ico"; Filename: "{app}\bin\{#MyAppExeName}"; WorkingDir: "{app}"; Tasks: desktopicon
 
 [Run]
 Filename: "{app}\bin\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
