@@ -39,6 +39,6 @@ steps:
       
       mkdir build
       cd build
-      cmake ../ -G "MinGW Makefiles" -DLOCAL_STATIC_HDF5:bool=True -DHDF5_DIR:path=${HDF5_DIR} ${{ parameters.extraflags }} -DCMAKE_PREFIX_PATH:path=${Qt5_DIR}/lib/cmake
+      cmake ../ -G "MinGW Makefiles" -DLOCAL_STATIC_HDF5:bool=True -DHDF5_DIR:path=${HDF5_DIR} ${{ parameters.extraflags }} -DBUILD_ANTLR_RUNTIME:bool=true -DBUILD_ANTLR_LINK_LIB:string="dist\Release\antlr4-runtime.lib" -DCMAKE_PREFIX_PATH:path=${Qt5_DIR}/lib/cmake
       MinGW32-make.exe
     displayName: 'Build'
