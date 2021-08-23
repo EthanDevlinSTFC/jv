@@ -30,4 +30,4 @@ build/
 # Miscellaneous
 *swp
 changes
-/.vs
+/.vscode
